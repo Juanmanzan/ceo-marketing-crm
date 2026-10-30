@@ -1,0 +1,29 @@
+name: Worflow Marketing CI
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+
+  pull_request:
+    branches:
+      - develop
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  verificar-proyecto:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Verificar archivos iniciales
+        run: |
+          test -f README.md
+          test -f .gitignore
+          echo "Verificación inicial completada"
