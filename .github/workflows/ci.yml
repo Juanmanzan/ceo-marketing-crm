@@ -27,3 +27,30 @@ jobs:
           test -f README.md
           test -f .gitignore
           echo "Verificación inicial completada"
+      
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Configurar variables de prueba
+        run: |
+          echo "DJANGO_SECRET_KEY=$(python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())')" >> "$GITHUB_ENV"
+          echo "DJANGO_DEBUG=0" >> "$GITHUB_ENV"
+          echo "DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1" >> "$GITHUB_ENV"
+
+      - name: Verificar configuración de Django
+        run: python manage.py check
+
+      - name: Verificar migraciones pendientes
+        run: python manage.py makemigrations --check --dry-run
+
+      - name: Ejecutar pruebas automatizadas
+        run: python manage.py test
+
+      - name: Verificar construcción Docker
+        run: docker build -t ceo-marketing-crm:test .
