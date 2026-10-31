@@ -47,6 +47,9 @@ export function configurarModalCliente(alGuardar) {
     }
     async function guardar(evento) {
         evento.preventDefault();
+        const botonGuardar = obtenerElemento('saveBtn');
+        if (botonGuardar.disabled) return;
+
         limpiarErroresFormulario();
         const datos = obtenerDatos();
         const errores = validarCliente(datos);
@@ -55,8 +58,9 @@ export function configurarModalCliente(alGuardar) {
             notificar(Object.values(errores)[0], true);
             return;
         }
-        const boton = obtenerElemento('saveBtn');
-        boton.disabled = true;
+        const textoOriginal = botonGuardar.textContent;
+        botonGuardar.disabled = true;
+        botonGuardar.textContent = 'Guardando...';
         try {
             if (idClienteEnEdicion === null) await crearCliente(datos);
             else await actualizarCliente(idClienteEnEdicion, datos);
@@ -68,7 +72,10 @@ export function configurarModalCliente(alGuardar) {
             console.error(error);
             mostrarErroresFormulario(error.detalles);
             notificar(error.estado === 403 ? 'Acceso denegado: verifica CSRF' : error.message, true);
-        } finally { boton.disabled = false; }
+        } finally {
+            botonGuardar.disabled = false;
+            botonGuardar.textContent = textoOriginal;
+        }
     }
     obtenerElemento('addBtn').addEventListener('click', () => abrir());
     formulario.addEventListener('submit', guardar);

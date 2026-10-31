@@ -34,6 +34,8 @@ Se requiere tener instalados Docker y Docker Compose.
 
 Crear un archivo `.env` a partir de `.env.example` y configurar las variables de entorno.
 
+Para ejecutar y evaluar el proyecto localmente, se debe configurar DJANGO_DEBUG=True en el archivo .env. Esta configuración permite utilizar el servidor de desarrollo de Django y cargar los recursos estáticos de la aplicación.
+
 Iniciar los servicios:
 
 ```bash

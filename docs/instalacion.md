@@ -50,7 +50,15 @@ DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1
 
 La clave debe ser única y mantenerse privada. El archivo `.env` no debe incluirse en el repositorio.
 
-El valor `DJANGO_DEBUG=True` se utiliza únicamente para la ejecución local.
+Para ejecutar el CRM mediante Docker en un entorno de desarrollo, se debe mantener la siguiente configuración:
+
+```dotenv
+DJANGO_DEBUG=True
+```
+
+Esta opción permite utilizar el servidor de desarrollo de Django con los archivos CSS y JavaScript.
+
+Para un despliegue de producción se debe configurar `DJANGO_DEBUG=False` y utilizar un servidor adecuado para servir la aplicación y sus archivos estáticos.
 
 ## 4. Iniciar el proyecto
 
@@ -83,6 +91,25 @@ Abrir la siguiente dirección en el navegador:
 ```text
 http://localhost:8000/crm/
 ```
+## 6. Crear un superusuario
+
+Para acceder al panel administrativo de Django, es necesario crear un superusuario.
+
+Ejecutar el siguiente comando:
+
+```bash
+docker compose exec web python manage.py createsuperuser
+```
+
+Ingresar el nombre de usuario, correo electrónico y contraseña solicitados en la terminal.
+
+Una vez creado, acceder al panel administrativo desde:
+
+```text
+http://localhost:8000/admin/
+```
+
+Iniciar sesión con las credenciales configuradas. Desde este panel se pueden consultar, registrar, actualizar y eliminar clientes.
 
 ## 7. Ejecutar las pruebas
 
