@@ -77,25 +77,11 @@ configurarFiltros({ alCambiar: nuevosFiltros => {
     cargarClientes();
 } });
 
-function cerrarModales() {
-    modalCliente.cerrar();
-    modalEliminar.cerrar();
-}
 document.querySelectorAll('[data-close]').forEach(boton => {
     boton.addEventListener('click', () => {
         if (boton.dataset.close === 'formOverlay') modalCliente.cerrar();
         if (boton.dataset.close === 'deleteOverlay') modalEliminar.cerrar();
     });
-});
-['formOverlay', 'deleteOverlay'].forEach(id => {
-    document.getElementById(id).addEventListener('click', evento => {
-        if (evento.target !== evento.currentTarget) return;
-        if (id === 'formOverlay') modalCliente.cerrar();
-        else modalEliminar.cerrar();
-    });
-});
-document.addEventListener('keydown', evento => {
-    if (evento.key === 'Escape') cerrarModales();
 });
 configurarNavegacion();
 actualizarPantalla();
