@@ -1,0 +1,652 @@
+[
+  {
+    "model": "appCRM.cliente",
+    "pk": 1,
+    "fields": {
+      "name": "Ana Torres",
+      "company": "Innova Consultores",
+      "email": "ana_torres1@example.com",
+      "phone": "0910017237",
+      "status": "Cliente",
+      "created_at": "2026-01-18T10:59:00Z",
+      "updated_at": "2026-01-24T10:59:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 2,
+    "fields": {
+      "name": "Luis Mendoza",
+      "company": "Mundo Empresarial",
+      "email": "luis_mendoza2@example.com",
+      "phone": "0910034474",
+      "status": "Cliente",
+      "created_at": "2026-01-23T13:53:00Z",
+      "updated_at": "2026-02-02T17:53:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 3,
+    "fields": {
+      "name": "Carolina Vega",
+      "company": "Impulso Marketing",
+      "email": "carolina_vega3@example.com",
+      "phone": "0910051711",
+      "status": "Prospecto",
+      "created_at": "2026-02-03T14:36:00Z",
+      "updated_at": "2026-02-06T19:36:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 4,
+    "fields": {
+      "name": "Diego Herrera",
+      "company": "Mundo Empresarial",
+      "email": "diego_herrera4@example.com",
+      "phone": "0910068948",
+      "status": "Prospecto",
+      "created_at": "2026-01-26T09:42:00Z",
+      "updated_at": "2026-01-29T15:42:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 5,
+    "fields": {
+      "name": "Valentina Paredes",
+      "company": "Impulso Marketing",
+      "email": "valentina_paredes5@example.com",
+      "phone": "",
+      "status": "Prospecto",
+      "created_at": "2026-02-03T10:54:00Z",
+      "updated_at": "2026-02-06T16:54:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 6,
+    "fields": {
+      "name": "Mateo Cárdenas",
+      "company": "",
+      "email": "mateo_cardenas6@example.com",
+      "phone": "0910103422",
+      "status": "Inactivo",
+      "created_at": "2026-02-05T15:17:00Z",
+      "updated_at": "2026-02-12T20:17:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 7,
+    "fields": {
+      "name": "Sofía Romero",
+      "company": "Soluciones Cóndor",
+      "email": "sofia_romero7@example.com",
+      "phone": "0910120659",
+      "status": "Cliente",
+      "created_at": "2026-02-22T14:10:00Z",
+      "updated_at": "2026-02-27T16:10:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 8,
+    "fields": {
+      "name": "Andrés Molina",
+      "company": "Altura Software",
+      "email": "andres_molina8@example.com",
+      "phone": "0910137896",
+      "status": "Prospecto",
+      "created_at": "2026-02-17T13:44:00Z",
+      "updated_at": "2026-02-27T18:44:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 9,
+    "fields": {
+      "name": "Camila Salazar",
+      "company": "Soluciones Cóndor",
+      "email": "camila_salazar9@example.com",
+      "phone": "0910155133",
+      "status": "Cliente",
+      "created_at": "2026-02-20T11:34:00Z",
+      "updated_at": "2026-03-03T12:34:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 10,
+    "fields": {
+      "name": "Sebastián Castro",
+      "company": "Nube Creativa",
+      "email": "sebastian_castro10@example.com",
+      "phone": "",
+      "status": "Prospecto",
+      "created_at": "2026-02-26T16:24:00Z",
+      "updated_at": "2026-03-02T21:24:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 11,
+    "fields": {
+      "name": "Daniela Rojas",
+      "company": "Grupo Horizonte",
+      "email": "daniela_rojas11@example.com",
+      "phone": "0910189607",
+      "status": "Cliente",
+      "created_at": "2026-03-12T17:14:00Z",
+      "updated_at": "2026-03-22T19:14:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 12,
+    "fields": {
+      "name": "Javier Morales",
+      "company": "",
+      "email": "javier_morales12@example.com",
+      "phone": "0910206844",
+      "status": "Prospecto",
+      "created_at": "2026-03-19T09:14:00Z",
+      "updated_at": "2026-03-19T15:14:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 13,
+    "fields": {
+      "name": "Paula Espinoza",
+      "company": "Grupo Horizonte",
+      "email": "paula_espinoza13@example.com",
+      "phone": "0910224081",
+      "status": "Prospecto",
+      "created_at": "2026-03-16T15:17:00Z",
+      "updated_at": "2026-03-17T16:17:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 14,
+    "fields": {
+      "name": "Nicolás Andrade",
+      "company": "Ecuador Retail",
+      "email": "nicolas_andrade14@example.com",
+      "phone": "0910241318",
+      "status": "Prospecto",
+      "created_at": "2026-03-30T14:13:00Z",
+      "updated_at": "2026-04-09T17:13:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 15,
+    "fields": {
+      "name": "Isabella Ortiz",
+      "company": "Creativa Studio",
+      "email": "isabella_ortiz15@example.com",
+      "phone": "",
+      "status": "Cliente",
+      "created_at": "2026-03-27T16:09:00Z",
+      "updated_at": "2026-03-31T17:09:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 16,
+    "fields": {
+      "name": "Gabriel Sánchez",
+      "company": "Ecuador Retail",
+      "email": "gabriel_sanchez16@example.com",
+      "phone": "0910275792",
+      "status": "Cliente",
+      "created_at": "2026-03-29T17:34:00Z",
+      "updated_at": "2026-04-02T22:34:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 17,
+    "fields": {
+      "name": "María José León",
+      "company": "Creativa Studio",
+      "email": "maria_jose_leon17@example.com",
+      "phone": "0910293029",
+      "status": "Prospecto",
+      "created_at": "2026-04-09T15:57:00Z",
+      "updated_at": "2026-04-18T18:57:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 18,
+    "fields": {
+      "name": "David Guerrero",
+      "company": "",
+      "email": "david_guerrero18@example.com",
+      "phone": "0910310266",
+      "status": "Cliente",
+      "created_at": "2026-04-10T12:08:00Z",
+      "updated_at": "2026-04-18T15:08:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 19,
+    "fields": {
+      "name": "Gabriela Zambrano",
+      "company": "Comercial Sierra",
+      "email": "gabriela_zambrano19@example.com",
+      "phone": "0910327503",
+      "status": "Cliente",
+      "created_at": "2026-04-11T09:55:00Z",
+      "updated_at": "2026-04-12T10:55:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 20,
+    "fields": {
+      "name": "Emilio Flores",
+      "company": "Punto Norte",
+      "email": "emilio_flores20@example.com",
+      "phone": "",
+      "status": "Prospecto",
+      "created_at": "2026-04-25T11:50:00Z",
+      "updated_at": "2026-05-05T14:50:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 21,
+    "fields": {
+      "name": "Renata Hidalgo",
+      "company": "Comercial Sierra",
+      "email": "renata_hidalgo21@example.com",
+      "phone": "0910361977",
+      "status": "Inactivo",
+      "created_at": "2026-04-29T10:24:00Z",
+      "updated_at": "2026-05-05T14:24:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 22,
+    "fields": {
+      "name": "Santiago Arias",
+      "company": "Tierra Verde",
+      "email": "santiago_arias22@example.com",
+      "phone": "0910379214",
+      "status": "Prospecto",
+      "created_at": "2026-05-02T17:16:00Z",
+      "updated_at": "2026-05-10T23:16:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 23,
+    "fields": {
+      "name": "Fernanda Acosta",
+      "company": "NovaTech Ecuador",
+      "email": "fernanda_acosta23@example.com",
+      "phone": "0910396451",
+      "status": "Cliente",
+      "created_at": "2026-04-30T10:43:00Z",
+      "updated_at": "2026-05-08T16:43:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 24,
+    "fields": {
+      "name": "Cristian Peña",
+      "company": "",
+      "email": "cristian_pena24@example.com",
+      "phone": "0910413688",
+      "status": "Inactivo",
+      "created_at": "2026-05-09T14:07:00Z",
+      "updated_at": "2026-05-13T17:07:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 25,
+    "fields": {
+      "name": "Alejandra Viteri",
+      "company": "NovaTech Ecuador",
+      "email": "alejandra_viteri25@example.com",
+      "phone": "",
+      "status": "Cliente",
+      "created_at": "2026-05-12T16:00:00Z",
+      "updated_at": "2026-05-23T21:00:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 26,
+    "fields": {
+      "name": "Pablo Medina",
+      "company": "Pacífico Logística",
+      "email": "pablo_medina26@example.com",
+      "phone": "0910448162",
+      "status": "Cliente",
+      "created_at": "2026-05-19T17:48:00Z",
+      "updated_at": "2026-05-21T21:48:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 27,
+    "fields": {
+      "name": "Natalia Bravo",
+      "company": "Andes Digital",
+      "email": "natalia_bravo27@example.com",
+      "phone": "0910465399",
+      "status": "Cliente",
+      "created_at": "2026-06-03T10:55:00Z",
+      "updated_at": "2026-06-13T12:55:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 28,
+    "fields": {
+      "name": "José Miguel Silva",
+      "company": "Pacífico Logística",
+      "email": "jose_miguel_silva28@example.com",
+      "phone": "0910482636",
+      "status": "Prospecto",
+      "created_at": "2026-06-07T17:38:00Z",
+      "updated_at": "2026-06-10T18:38:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 29,
+    "fields": {
+      "name": "Diana Cevallos",
+      "company": "Andes Digital",
+      "email": "diana_cevallos29@example.com",
+      "phone": "0910499873",
+      "status": "Prospecto",
+      "created_at": "2026-06-04T11:34:00Z",
+      "updated_at": "2026-06-16T15:34:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 30,
+    "fields": {
+      "name": "Ricardo Suárez",
+      "company": "",
+      "email": "ricardo_suarez30@example.com",
+      "phone": "",
+      "status": "Inactivo",
+      "created_at": "2026-06-18T09:38:00Z",
+      "updated_at": "2026-06-23T12:38:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 31,
+    "fields": {
+      "name": "Lucía Benítez",
+      "company": "Mundo Empresarial",
+      "email": "lucia_benitez31@example.com",
+      "phone": "0910534347",
+      "status": "Inactivo",
+      "created_at": "2026-06-09T10:59:00Z",
+      "updated_at": "2026-06-14T16:59:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 32,
+    "fields": {
+      "name": "Esteban Álvarez",
+      "company": "Innova Consultores",
+      "email": "esteban_alvarez32@example.com",
+      "phone": "0910551584",
+      "status": "Cliente",
+      "created_at": "2026-06-26T13:15:00Z",
+      "updated_at": "2026-06-26T14:15:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 33,
+    "fields": {
+      "name": "Michelle Cabrera",
+      "company": "Mundo Empresarial",
+      "email": "michelle_cabrera33@example.com",
+      "phone": "0910568821",
+      "status": "Cliente",
+      "created_at": "2026-07-03T10:05:00Z",
+      "updated_at": "2026-07-14T13:05:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 34,
+    "fields": {
+      "name": "Tomás Chávez",
+      "company": "Impulso Marketing",
+      "email": "tomas_chavez34@example.com",
+      "phone": "0910586058",
+      "status": "Inactivo",
+      "created_at": "2026-07-07T10:48:00Z",
+      "updated_at": "2026-07-15T16:48:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 35,
+    "fields": {
+      "name": "Mónica Palacios",
+      "company": "Altura Software",
+      "email": "monica_palacios35@example.com",
+      "phone": "",
+      "status": "Prospecto",
+      "created_at": "2026-07-01T11:42:00Z",
+      "updated_at": "2026-07-08T15:42:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 36,
+    "fields": {
+      "name": "Kevin Vargas",
+      "company": "",
+      "email": "kevin_vargas36@example.com",
+      "phone": "0910620532",
+      "status": "Inactivo",
+      "created_at": "2026-07-06T13:33:00Z",
+      "updated_at": "2026-07-15T16:33:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 37,
+    "fields": {
+      "name": "Andrea Muñoz",
+      "company": "Altura Software",
+      "email": "andrea_munoz37@example.com",
+      "phone": "0910637769",
+      "status": "Inactivo",
+      "created_at": "2026-07-12T17:48:00Z",
+      "updated_at": "2026-07-23T22:48:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 38,
+    "fields": {
+      "name": "Felipe Jaramillo",
+      "company": "Soluciones Cóndor",
+      "email": "felipe_jaramillo38@example.com",
+      "phone": "0910655006",
+      "status": "Prospecto",
+      "created_at": "2026-07-17T13:25:00Z",
+      "updated_at": "2026-07-27T18:25:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 39,
+    "fields": {
+      "name": "Karen Ponce",
+      "company": "Nube Creativa",
+      "email": "karen_ponce39@example.com",
+      "phone": "0910672243",
+      "status": "Cliente",
+      "created_at": "2026-07-24T16:57:00Z",
+      "updated_at": "2026-08-01T19:57:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 40,
+    "fields": {
+      "name": "Bruno Delgado",
+      "company": "Soluciones Cóndor",
+      "email": "bruno_delgado40@example.com",
+      "phone": "",
+      "status": "Cliente",
+      "created_at": "2026-07-25T12:14:00Z",
+      "updated_at": "2026-07-26T14:14:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 41,
+    "fields": {
+      "name": "Elena López",
+      "company": "Nube Creativa",
+      "email": "elena_lopez41@example.com",
+      "phone": "0910706717",
+      "status": "Prospecto",
+      "created_at": "2026-07-29T17:14:00Z",
+      "updated_at": "2026-08-07T18:14:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 42,
+    "fields": {
+      "name": "Óscar Ruiz",
+      "company": "",
+      "email": "oscar_ruiz42@example.com",
+      "phone": "0910723954",
+      "status": "Cliente",
+      "created_at": "2026-08-03T10:45:00Z",
+      "updated_at": "2026-08-13T10:45:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 43,
+    "fields": {
+      "name": "Victoria Aguirre",
+      "company": "Ecuador Retail",
+      "email": "victoria_aguirre43@example.com",
+      "phone": "0910741191",
+      "status": "Prospecto",
+      "created_at": "2026-08-11T10:57:00Z",
+      "updated_at": "2026-08-11T16:57:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 44,
+    "fields": {
+      "name": "Daniel Acuña",
+      "company": "Grupo Horizonte",
+      "email": "daniel_acuna44@example.com",
+      "phone": "0910758428",
+      "status": "Prospecto",
+      "created_at": "2026-08-18T10:32:00Z",
+      "updated_at": "2026-08-21T12:32:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 45,
+    "fields": {
+      "name": "Mariana Ochoa",
+      "company": "Ecuador Retail",
+      "email": "mariana_ochoa45@example.com",
+      "phone": "",
+      "status": "Prospecto",
+      "created_at": "2026-08-28T16:13:00Z",
+      "updated_at": "2026-09-05T17:13:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 46,
+    "fields": {
+      "name": "Héctor Naranjo",
+      "company": "Creativa Studio",
+      "email": "hector_naranjo46@example.com",
+      "phone": "0910792902",
+      "status": "Prospecto",
+      "created_at": "2026-09-03T16:15:00Z",
+      "updated_at": "2026-09-15T19:15:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 47,
+    "fields": {
+      "name": "Sara Paz",
+      "company": "Punto Norte",
+      "email": "sara_paz47@example.com",
+      "phone": "0910810139",
+      "status": "Prospecto",
+      "created_at": "2026-09-09T15:12:00Z",
+      "updated_at": "2026-09-10T15:12:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 48,
+    "fields": {
+      "name": "Martín Cordero",
+      "company": "",
+      "email": "martin_cordero48@example.com",
+      "phone": "0910827376",
+      "status": "Prospecto",
+      "created_at": "2026-09-12T15:22:00Z",
+      "updated_at": "2026-09-18T18:22:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 49,
+    "fields": {
+      "name": "Rocío Borja",
+      "company": "Punto Norte",
+      "email": "rocio_borja49@example.com",
+      "phone": "0910844613",
+      "status": "Prospecto",
+      "created_at": "2026-09-14T09:43:00Z",
+      "updated_at": "2026-09-24T14:43:00Z"
+    }
+  },
+  {
+    "model": "appCRM.cliente",
+    "pk": 50,
+    "fields": {
+      "name": "Ángel Pino",
+      "company": "Comercial Sierra",
+      "email": "angel_pino50@example.com",
+      "phone": "",
+      "status": "Cliente",
+      "created_at": "2026-09-13T09:25:00Z",
+      "updated_at": "2026-09-24T11:25:00Z"
+    }
+  }
+]
