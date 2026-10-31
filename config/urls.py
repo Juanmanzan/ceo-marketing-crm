@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from appCRM.views.paginas import mostrarDashboard
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('appCRM.urls')),
+    path("crm/", mostrarDashboard, name="dashboard"),
 ]

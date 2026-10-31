@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14161c">
+  <title>{% block title %}CEO Marketing | CRM{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}?v=2">
+</head>
+<body>
+  {% include "components/icons.html" %}
+  {% block content %}{% endblock %}
+  {% block scripts %}{% endblock %}
+</body>
+</html>

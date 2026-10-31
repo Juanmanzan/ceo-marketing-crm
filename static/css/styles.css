@@ -1,0 +1,9 @@
+/* Punto de entrada del CSS del CRM. Mantener este orden. */
+@import url("base.css");
+@import url("sidebar.css");
+@import url("header.css");
+@import url("kpi.css");
+@import url("clientes.css?v=2");
+@import url("formularios.css");
+@import url("notificaciones.css");
+@import url("responsive.css");

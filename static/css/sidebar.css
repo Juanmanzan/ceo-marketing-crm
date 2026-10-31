@@ -1,0 +1,373 @@
+/* Estructura principal y barra lateral */
+.app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 247px minmax(0, 1fr);
+}
+
+.sidebar {
+  background: var(--nav);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 30;
+  padding: 26px 14px;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  border-top: 1px solid #292c35;
+  padding: 18px 9px 0;
+}
+
+/* Marca y perfil */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 13px 32px;
+}
+
+.brand-symbol {
+  width: 32px;
+  height: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.brand-symbol:before,
+.brand-symbol:after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  width: 23px;
+  height: 24px;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  background: #357deb;
+}
+
+.brand-symbol:before {
+  left: 0;
+}
+
+.brand-symbol:after {
+  left: 11px;
+  background: #40c6d7;
+  opacity: .8;
+}
+
+.brand-name {
+  font-size: 21px;
+  font-weight: 780;
+  letter-spacing: -1px;
+}
+
+.brand-name span {
+  font-weight: 400;
+  color: #8c95a7;
+  font-size: 10px;
+  letter-spacing: 2.2px;
+  display: block;
+  margin-top: -3px;
+}
+
+.ceo-mark {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: grid;
+  place-items: center;
+}
+
+.ceo-mark svg {
+  width: 42px;
+  height: 42px;
+  display: block;
+}
+
+.brand .ceo-wordmark {
+  font-size: 15px;
+  line-height: 1.35;
+  letter-spacing: -.3px;
+  white-space: nowrap;
+  font-weight: 740;
+}
+
+.brand .ceo-wordmark span {
+  margin-top: 3px;
+  font-size: 9px;
+  letter-spacing: 1.55px;
+  color: #98a8bd;
+  font-weight: 650;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-avatar {
+  height: 37px;
+  width: 37px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #344963;
+  color: #d7e7ff;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.profile strong,
+.profile small {
+  display: block;
+}
+
+.profile strong {
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.profile small {
+  font-size: 11px;
+  color: #7d8390;
+}
+
+.profile-trigger {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 1px solid transparent !important;
+  border-radius: 10px;
+  padding: 9px 7px;
+  color: white;
+  transition: background .25s, border-color .25s, transform .25s;
+  cursor: pointer;
+}
+
+.profile-trigger:hover,
+.profile-trigger[aria-expanded=true] {
+  background: #232b38;
+  border-color: #3b4b62 !important;
+  transform: translateY(-2px);
+}
+
+.profile-trigger:active {
+  transform: scale(.97);
+}
+
+.profile-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-chevron {
+  width: 18px;
+  height: 18px;
+  color: #a8b6ca;
+  transition: transform .35s cubic-bezier(.2, 1.4, .3, 1);
+}
+
+.profile-trigger[aria-expanded=true] .profile-chevron {
+  transform: rotate(180deg);
+}
+
+.profile-pop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #37485f;
+  background: #212a38;
+  border-radius: 10px;
+  animation: profile-reveal .3s cubic-bezier(.22, 1.5, .3, 1) both;
+}
+
+.profile-pop strong,
+.profile-pop small {
+  display: block;
+}
+
+.profile-pop strong {
+  font-size: 12px;
+}
+
+.profile-pop small {
+  font-size: 10px;
+  color: #98a6b8;
+}
+
+.profile-pop-dot {
+  width: 9px;
+  height: 9px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #57bdcb;
+  box-shadow: 0 0 0 4px #57bdcb18;
+}
+
+.profile-detail {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 4px 0 24px;
+}
+
+.profile-detail .profile-avatar {
+  height: 64px;
+  width: 64px;
+  font-size: 20px;
+  background: #e3effe;
+  color: #356bb1;
+}
+
+.profile-detail h4 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.profile-detail p {
+  margin: 3px 0 0;
+  color: #8490a1;
+  font-size: 12px;
+}
+
+.profile-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.profile-info div {
+  padding: 14px;
+  background: #f7f9fc;
+  border: 1px solid #e9edf3;
+  border-radius: 10px;
+}
+
+.profile-info span,
+.profile-info strong {
+  display: block;
+}
+
+.profile-info span {
+  font-size: 11px;
+  color: #939daa;
+}
+
+.profile-info strong {
+  font-size: 13px;
+  color: #344153;
+  margin-top: 5px;
+}
+
+/* Navegación de la barra lateral */
+.nav-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #686b78;
+  padding: 0 18px 13px;
+  text-transform: uppercase;
+}
+
+.line-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.line-item {
+  position: relative;
+  --effect: 0;
+  border-radius: 9px;
+  isolation: isolate;
+  margin: 2px 0;
+}
+
+.line-button {
+  width: 100%;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  border: 0;
+  border-radius: 8px;
+  background: transparent !important;
+  color: var(--nav-text);
+  position: relative;
+  padding: 0 16px 0 23px;
+  white-space: nowrap;
+  transform: translate3d(0, 0, 0);
+  transition: transform 210ms cubic-bezier(.22, 1, .36, 1), color 180ms ease, background .22s ease;
+  will-change: auto;
+}
+
+.line-button svg {
+  width: 19px;
+  height: 19px;
+  stroke-width: 1.7;
+  flex-shrink: 0;
+}
+
+.line-button .nav-label {
+  font-size: 13.5px;
+}
+
+.line-item:hover .line-button,
+.line-item:focus-within .line-button {
+  transform: translate3d(6px, 0, 0);
+  color: #fff;
+  background: #1d222d;
+}
+
+.line-item.active {
+  background: #232b38;
+  border-radius: 9px;
+  --effect: 1;
+}
+
+.line-item.active .line-button {
+  background: #253143 !important;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: inset 0 0 0 1px #34475e;
+}
+
+.line-item.active .line-button svg {
+  color: #60b6ee;
+}
+
+.line-marker {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 3px;
+  height: 23px;
+  background: var(--cyan);
+  border-radius: 0 3px 3px 0;
+  opacity: .14;
+  transform: translateY(-50%) scaleY(.45);
+  pointer-events: none;
+  transition: opacity 180ms ease, transform 210ms cubic-bezier(.22, 1, .36, 1);
+}
+
+.line-item:hover .line-marker,
+.line-item:focus-within .line-marker {
+  opacity: .8;
+  transform: translateY(-50%) scaleY(1);
+}
+
+.line-item.active .line-marker {
+  opacity: 1;
+  transform: translateY(-50%) scaleY(1);
+  background: var(--cyan);
+}
