@@ -44,7 +44,7 @@ Editar `.env` con los siguientes valores:
 
 ```dotenv
 DJANGO_SECRET_KEY=CLAVE_GENERADA
-DJANGO_DEBUG=True
+DJANGO_DEBUG=1
 DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1
 ```
 
@@ -79,9 +79,8 @@ docker compose exec web python manage.py migrate
 Opcionalmente, cargar el conjunto de clientes proporcionado con el proyecto:
 
 ```bash
-docker docker compose exec web python manage.py loaddata clientes_prueba.json
+docker compose exec web python manage.py loaddata clientes_prueba.json
 ```
-
 Esta operación permite probar el directorio, la búsqueda, los filtros y los indicadores del dashboard.
 
 ## 6. Acceder a la aplicación
