@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
-from appCRM.models import Cliente
+from appCRM.models import Cliente, statusClient
+from django.db.models import Count, Q
 from django.views.decorators.http import require_GET, require_POST, require_http_methods
 from django.db import IntegrityError
 from ..forms import ClienteForms
@@ -13,27 +14,45 @@ import json
 def listarClientes(request):
 
     cursor = request.GET.get('cursor')
+    buscar = request.GET.get('buscar', '').strip()
+    estado = request.GET.get('estado')
 
     limite = 10
 
-    ## consultamos todos los usaurios y los ordenamos 
-    clientesQuery = Cliente.objects.all().order_by('id')
+    if estado is not None and estado not in statusClient.values:
+        return JsonResponse({
+            "error": "El estado debe ser Prospecto, Cliente o Inactivo"
+        }, status=400)
 
-    if cursor:
+    if cursor is not None:
         try:
-            if(int(cursor) < 0):
-                  
-                    return JsonResponse({
-                        "error": "El valor ingresado no es válido"
-                    }, status=404)
-            
-            clientesQuery = clientesQuery.filter(id__gt=int(cursor))
-            
+            if not cursor.isascii() or not cursor.isdigit():
+                raise ValueError
+
+            cursor = int(cursor)
+            if cursor > 9223372036854775807:
+                raise ValueError
         except ValueError:
-           
-           return JsonResponse({
-               "error": "El valor ingresado no es válido",
-           }, status=400)
+            return JsonResponse({
+                "error": "El cursor debe ser un entero no negativo válido"
+            }, status=400)
+
+    filtros = Q()
+    if buscar:
+        filtros &= Q(name__icontains=buscar) | Q(company__icontains=buscar)
+
+    if estado is not None:
+        filtros &= Q(status=estado)
+
+    # Contar antes de aplicar el cursor para conservar el total del filtro
+    totales = Cliente.objects.aggregate(
+        totalClientes=Count('id'),
+        totalFiltrados=Count('id', filter=filtros)
+    )
+
+    clientesQuery = Cliente.objects.filter(filtros).order_by('id')
+    if cursor is not None:
+        clientesQuery = clientesQuery.filter(id__gt=cursor)
 
 
     clientesQuery = clientesQuery.values(
@@ -61,7 +80,8 @@ def listarClientes(request):
 
     data = {
         "clientes": clientesLista,
-        "totalClientes": Cliente.objects.count(),
+        "totalClientes": totales['totalClientes'],
+        "totalFiltrados": totales['totalFiltrados'],
         "paginacion": {
             "existeOtraPagina": existeOtraPagina,
             "cursor_next": cursor_next
@@ -227,4 +247,3 @@ def eliminarCliente(request, id):
         return JsonResponse({
             "error": "Cliente no encontrado"
         }, status=404)
-    
