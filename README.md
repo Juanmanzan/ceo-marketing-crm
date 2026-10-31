@@ -34,7 +34,7 @@ Se requiere tener instalados Docker y Docker Compose.
 
 Crear un archivo `.env` a partir de `.env.example` y configurar las variables de entorno.
 
-Para ejecutar y evaluar el proyecto localmente, se debe configurar DJANGO_DEBUG=True en el archivo .env. Esta configuración permite utilizar el servidor de desarrollo de Django y cargar los recursos estáticos de la aplicación.
+Para ejecutar y evaluar el proyecto localmente, se debe configurar DJANGO_DEBUG=1 en el archivo .env. Esta configuración permite utilizar el servidor de desarrollo de Django y cargar los recursos estáticos de la aplicación.
 
 Iniciar los servicios:
 
@@ -54,6 +54,15 @@ Acceder a la aplicación:
 http://localhost:8000/crm/
 
 ```
+
+## 5. Cargar datos de prueba
+
+Opcionalmente, cargar el conjunto de clientes proporcionado con el proyecto:
+
+```bash
+docker compose exec web python manage.py loaddata clientes_prueba.json
+```
+Esta operación permite probar el directorio, la búsqueda, los filtros y los indicadores del dashboard.
 
 ## 4. Capturas de pantalla
 
