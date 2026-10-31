@@ -1,10 +1,13 @@
 from django.contrib import admin
 
 from .models import Cliente
+from .forms import ClienteForms
 
 
 @admin.register(Cliente)
 class ClienteAdmin(admin.ModelAdmin):
+    form = ClienteForms
+
     list_display = (
         'id',
         'name',

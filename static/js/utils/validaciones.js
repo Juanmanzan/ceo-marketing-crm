@@ -7,6 +7,10 @@ export function validarCliente(datos) {
     const errores = {};
     if (!datos.name.trim()) errores.name = 'El nombre es obligatorio';
     else if (datos.name.length > 50) errores.name = 'Máximo 50 caracteres';
+    else if (datos.name.trim().split(/\s+/).length < 2) errores.name = 'Ingresa al menos un nombre y un apellido';
+    else if (!datos.name.trim().split(/\s+/).every(palabra => /^\p{L}+(?:[-'’]\p{L}+)*$/u.test(palabra))) {
+        errores.name = 'El nombre solo puede contener letras, espacios, guiones y apóstrofes';
+    }
     if (!datos.email.trim()) errores.email = 'El correo es obligatorio';
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(datos.email)) errores.email = 'Ingresa un correo válido';
     if (datos.company.length > 50) errores.company = 'Máximo 50 caracteres';
