@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}CEO Marketing | Gestión de clientes{% endblock %}
+{% block content %}
+<div class="app">
+  {% include "components/sidebar.html" %}
+  <div class="mobile-shade" id="shade"></div>
+  <div class="main">
+    {% include "components/header.html" %}
+    <main class="workspace">
+      {% include "components/page_heading.html" %}
+      <div id="dashboardContent">
+        {% include "components/kpi_cards.html" %}
+        {% include "components/client_panel.html" %}
+      </div>
+    </main>
+  </div>
+</div>
+{% include "components/client_form_modal.html" %}
+{% include "components/confirm_delete_modal.html" %}
+{% include "components/toast.html" %}
+{% endblock %}
+{% block scripts %}
+    {% load static %}
+    <script type="module" src="{% static 'js/main.js' %}"></script>
+{% endblock %}
